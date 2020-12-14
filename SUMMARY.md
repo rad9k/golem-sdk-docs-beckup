@@ -14,6 +14,7 @@
 * [Requestor development tutorial](tutorials/requestor-tutorial.md)
 * [Developing a Golem based product](tutorials/developing-a-golem-network-based-product.md)
 * [Becoming a provider tutorial](tutorials/provider-tutorial.md)
+* [Writing your own provider's market strategy](tutorials/writing-your-own-providers-market-strategy.md)
 
 ## Requestor reference
 
@@ -24,8 +25,6 @@
 * [Provider CLI reference](provider-reference/provider-cli.md)
 
 ## Other golem related
-
----
 
 * [Golem infrastructure documentation](https://golem-network.gitbook.io/golem-internal-documentation-test)
 

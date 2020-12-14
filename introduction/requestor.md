@@ -8,12 +8,12 @@ description: The requestor actor in the Golem
 
 Technically speaking the Golem requestor is some code running on Internet-connected hardware.
 
-The characteristic that describes the requestor agent is the need to use hardware resources that are available in the Golem being shared by providers. 
+The characteristic that describes the requestor agent is the need to use hardware resources that are available in the Golem being shared by providers.
 
 {% hint style="info" %}
 Because local hardware resources on your desktop, mobile device, or even server machine are always limited, there is always some task that local, requestor's hardware can not perform in a reasonable time frame or not at all \(for example because of memory limit\).
 
-There is no limit on the resources available in Golem. Requestor can use as many resources as he needs.  All of those hardware resources can be used at the same time thus reducing hour or days-long computations to seconds.
+There is no limit on the resources available in Golem. Requestor can use as many resources as he needs. All of those hardware resources can be used at the same time thus reducing hour or days-long computations to seconds.
 {% endhint %}
 
 ## What does a requestor do?
@@ -22,7 +22,7 @@ The typical use case for the requestor is as follows:
 
 * **Define the need**
 
-Define the IT resources it needs. Those needs \(for example CPU and memory requirements\) would be than by the golem infrastructure published in the decentralized market in a form of so-called Demand. 
+Define the IT resources it needs. Those needs \(for example CPU and memory requirements\) would be than by the golem infrastructure published in the decentralized market in a form of so-called Demand.
 
 * **Buy the resources**
 
@@ -41,7 +41,7 @@ The last step is to pay for the usage of the resources \(unless the provider is 
 As requestors are based on some concrete business need there is no single requestor that fits all the use cases.
 
 {% hint style="info" %}
-We do not provide any predefined requestor binary, as it is up to 3rd parties to develop products that are based on Golem's unique value proposition. 
+We do not provide any predefined requestor binary, as it is up to 3rd parties to develop products that are based on Golem's unique value proposition.
 {% endhint %}
 
 There are many possible scenarios defining the actual form and shape of the product that is based on Golem.
@@ -67,7 +67,7 @@ Here, your application code is running in the webserver and the front-end layer 
 ![Webserver based requestor](../.gitbook/assets/requestor-tutorial-web-based%20%281%29.png)
 
 {% hint style="info" %}
-To write a fully functional requestor you need to write just a few lines of code. 
+To write a fully functional requestor you need to write just a few lines of code.
 
 The rest is done by Golem infrastructure.
 {% endhint %}
@@ -78,10 +78,10 @@ The basic requestor development tutorial is here:
 
 ## How can I benefit from being a requestor?
 
-The typical benefit for the requestor is to have instant access to a very large pool of hardware. Instead of using local hardware, the requestor is able to use IT resources available on the decentralized market. 
+The typical benefit for the requestor is to have instant access to a very large pool of hardware. Instead of using local hardware, the requestor is able to use IT resources available on the decentralized market.
 
 {% hint style="info" %}
-Remember that one requestor can use hardware from many providers at the same time. 
+Remember that one requestor can use hardware from many providers at the same time.
 {% endhint %}
 
 Think about training a large ML model in seconds instead of hours. This is just an example, as there are many interesting business use cases described in the:

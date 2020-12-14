@@ -6,7 +6,7 @@ description: The provider actor in the Golem
 
 ## What is a provider?
 
-Technically speaking provider is some code running on Internet-connected hardware. The code implements the Golem network protocol, thus the code acts as an actor in the Golem. 
+Technically speaking provider is some code running on Internet-connected hardware. The code implements the Golem network protocol, thus the code acts as an actor in the Golem.
 
 The characteristic that describes the provider agent is the fact of sharing hardware resources to the Golem. In practice, almost any computer might act as provider hardware. It can be a laptop, desktop, or a server machine. The particular resource details \(for example number of CPUs or memory limit\) that are subject to sharing can be configured by the hardware owner.
 
@@ -34,7 +34,7 @@ After installing and running the Golem provider you will benefit in the followin
 The payments are done through [ethereum](https://ethereum.org/), so the whole process is very simple!
 {% endhint %}
 
-The typical resources usage scenario is as follows: after receiving input data, the processing is done by your hardware, output data being sent back to the requestor, the [ethereum](https://ethereum.org/) payment is done. 
+The typical resources usage scenario is as follows: after receiving input data, the processing is done by your hardware, output data being sent back to the requestor, the [ethereum](https://ethereum.org/) payment is done.
 
 It is that simple.
 
@@ -45,6 +45,4 @@ It is that simple.
 Becoming a Golem network provider is open to anyone. The installation and configuration are super easy. The details are described in the:
 
 {% page-ref page="../tutorials/provider-tutorial.md" %}
-
-
 

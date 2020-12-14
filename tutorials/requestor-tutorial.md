@@ -33,7 +33,7 @@ To proceed with this, quite focused tutorial, you'll first need to ensure the fo
 
 ### Running `yagna` daemon from sources
 
-To run `yagna` from sources, you'll need to have `rust` development environment installed - it will be needed to run the `yagna` daemon itself. If you don't have it, please refer to the official docs to install it: [https://www.rust-lang.org/learn/get-started](https://www.rust-lang.org/learn/get-started) 
+To run `yagna` from sources, you'll need to have `rust` development environment installed - it will be needed to run the `yagna` daemon itself. If you don't have it, please refer to the official docs to install it: [https://www.rust-lang.org/learn/get-started](https://www.rust-lang.org/learn/get-started)
 
 Afterward, you'll need to launch the `yagna` service.
 
@@ -47,7 +47,7 @@ first, copy the template environment file onto a proper .env file:
 cp .env-template .env
 ```
 
- then run:
+then run:
 
 ```text
 cargo run service run
@@ -55,7 +55,7 @@ cargo run service run
 
 This will build the `yagna` using the Rust compiler \(which can take a considerable time unless you're working on a really fast machine\) and subsequently launch it.
 
-Once the daemon launches, it will start emitting some debug messages among which one of the first ones will look like: `[2020-07-16T12:11:33Z INFO yagna] Starting yagna service!` .  There you go! Leave the shell with the yagna service running and you're ready for the following steps.
+Once the daemon launches, it will start emitting some debug messages among which one of the first ones will look like: `[2020-07-16T12:11:33Z INFO yagna] Starting yagna service!` . There you go! Leave the shell with the yagna service running and you're ready for the following steps.
 
 ### Generate the app key
 
@@ -175,7 +175,7 @@ Okay, we'll skip over the imports at the top and `asyncio` boilerplate code at t
 
 ### Specify your demand
 
-Normally, you'd need to adapt your docker image to golem using `gvmkit` **\[LINK TO GMVKIT\]**  but for the purpose of this tutorial, we're using the pre-converted image containing the Blender renderer.
+Normally, you'd need to adapt your docker image to golem using `gvmkit` **\[LINK TO GMVKIT\]** but for the purpose of this tutorial, we're using the pre-converted image containing the Blender renderer.
 
 So, first, we need to specify which image we'll be using and what its memory and disk space requirements are:
 
@@ -189,7 +189,7 @@ package = await vm.repo(
 
 As you can see, we're pointing to an image within our GVM repository using the hash of the Blender image and we're indicating that it requires half a gigabyte of RAM and 2 gigabytes of disk space.
 
-This effectively creates a `Demand` for the market to respond to. In other words, it communicates to the market that our requestor wants to have the specified image executed with at least the specified amounts of RAM and disk space. 
+This effectively creates a `Demand` for the market to respond to. In other words, it communicates to the market that our requestor wants to have the specified image executed with at least the specified amounts of RAM and disk space.
 
 ### Define your task's steps
 
@@ -250,7 +250,7 @@ We're using `ctx.begin()` to start the sequence of commands for this specific fr
 
 As you can see, the `frame` parameter comes from the `data` field of the `Task` objects that are passed into the `Engine`'s `map` function later on in the code. We could have just as well filled the `data` with e.g. a dictionary containing crop parameters for each fragment - if we wanted to render different parts of images on each fragment's execution. Or we could fill it with names of different scene files if e.g. we wanted each task to render a completely different scene file. Of course, in this latter case, we'd also need to use `ctx.send_file()` to send a new scene file for each new task fragment.
 
-**TLDR**, the most important take-away here is that `send_json` provides an easy way to pass a dictionary of parameters into the execution container and that you pass parameters for each task fragment in the `data` field of the `Task` objects passed to the `map` function. 
+**TLDR**, the most important take-away here is that `send_json` provides an easy way to pass a dictionary of parameters into the execution container and that you pass parameters for each task fragment in the `data` field of the `Task` objects passed to the `map` function.
 
 Okay, next we have the most important step:
 
@@ -304,7 +304,7 @@ async with Engine(
 
 The `package` here is effectively our `Demand` that we have created above, `max_workers` specifies the maximum number of providers we want to be working on our task, `budget` specifies the maximum budget \(in GNT\) that this task may utilize **\[ ENSURE IT'S THE BUDGET FOR THE WHOLE THING AND NOT PER-FRAGMENT \],** `timeout` is the time after which we absolutely want our whole task to be finished by and after which we'll treat it as failed unless it's already finished and finally, the `subnet_tag` serves to select a subset of the network that our requestor node wants to limit its communications to.
 
-The last parameter means that if we do specify the subnet - each and every provider who wants to execute our tasks must be running with the same `subnet` parameter. 
+The last parameter means that if we do specify the subnet - each and every provider who wants to execute our tasks must be running with the same `subnet` parameter.
 
 With the `Engine` in place, we can finally tell it what we want to execute and also _how_ we want to define each fragment.
 
